@@ -123,15 +123,25 @@ giveDate();
 function startTimer(duration) {
   let timer = duration, segundos;
   setInterval(()=> {
-      segundos = parseInt(timer % 180, 10);
+      segundos = parseInt(timer % 10, 10);
       segundos = segundos < 10 ? "0" + segundos : segundos;
       display = document.querySelector('#timer'); // selecionando o timer,
       display.innerHTML = segundos;
       if (--timer < 0) {
           timer = duration;
-          window.location.href = "http://127.0.0.1:5500/index.html";
+          //window.location.href = "http://127.0.0.1:5500/index.html";
+          if (window.confirm("Tempo esgotado. Deseja sair da página?")) {
+            window.location.href = "http://127.0.0.1:5500/index.html";
+          } else{
+            window.location.reload();          
+          }
       }
   }, 1000);
 }
 
-startTimer(180)
+startTimer(10) 
+
+
+
+
+
