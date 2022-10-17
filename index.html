@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;700&display=swap" rel="stylesheet">
+    <title>Compass - Login</title>
+</head>
+<body>
+    <section class="secao-principal">
+        <div class="principal-login">
+            <div class="metade-1">
+                <div class="principal-chamada">
+                    <h1 id="chamada-titulo">Olá,</h1>
+                    <p id="chamada-texto">Para continuar navegando de forma <br>segura, efetue o login na rede.</p>
+                </div>
+                
+                <div class="form">
+                    <h2 id="form-texto">Login</h2>
+                    <div id="camp-usuario">
+                        <input id="form-email" type="email" name="email" placeholder="Usuario" required>
+                        <img  id="fig-usuario" src="img/Vector - usuario.svg" alt="">
+                    </div>
+                    <div id="camp-senha">
+                         <input id="form-senha" type="password" name="Senha" placeholder="Senha" required>
+                         <img  id="fig-senha" src="img/Vector - senha.svg" alt="">
+                    </div>
+                    <p class="error-msg"></p>
+                    <input id="btn-continuar" type="submit" value="Continuar" onclick="logar()">
+                </div>
+            </div>
+            <div class="img-container">
+                <img class="img-note" src="img/image 2.jpg" alt="notebook aberto">
+                <img class="img-logoBranco" src="img/Logo-Compasso-Branco.svg">
+            </div>
+        </div>
+              
+    </section>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
