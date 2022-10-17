@@ -1,0 +1,143 @@
+html, body {
+    font-family: 'Nunito', sans-serif;
+    background: linear-gradient(105.96deg, #FFFFFF 0%, #F0F0F0 97.86%);
+}
+
+.header{
+    display:flex;
+    justify-content: space-between;
+    margin: 3em;
+}
+
+.bola-logo{
+    position: fixed;
+    width: 400px;
+
+}
+
+.main{
+    display: flex;
+    justify-content: end;
+    text-align: right;
+    margin: 6em 4em;
+}
+
+.main h3 {
+    font-size: 36px;
+    color: #C12D18;
+}
+
+.main p{
+    font-size: 24px;
+    color: #222222;
+}
+
+.main h2{
+    font-size: 54px;
+    color: #C12D18;
+    font-weight: 700;
+}
+
+.footer{
+    background: linear-gradient(90.16deg, #33383D 0%, #1C1D20 100%);
+    display: flex; 
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    bottom: 0; 
+}
+
+.footer-txt {
+    color: #FFFFFF;
+    font-size: 12px;
+    display: flex;   
+    width: 100%;
+    justify-content: center;
+    margin-right: 2em;
+    text-align: right;
+}
+
+.container-footer{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 10vh;
+    text-align: center;
+    align-items: center;
+}
+
+.footer-second{
+    width: 80%;
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+}
+
+#barra{
+    width: 50px;
+    margin-left: -150px;
+    rotate: 90deg;
+}
+
+.footer-btns {
+    background: white;
+    margin-left: 300px;
+    padding: 26px;
+}
+
+#btn-continue{
+    font-size: 12px;
+    font-weight: 400;
+    color: #C13216;
+    padding-bottom: 35px;
+    padding-top: 31px;
+    font-weight: 700;
+}
+
+#btn-continue:hover{
+    color: black;
+    transition: .3s;
+}
+
+#btn-logout{
+    font-size: 12px;
+    align-items: center;;
+    color: white;
+    padding: 31px;
+    padding-left: 21px; 
+    font-weight: 700;  
+}
+
+#btn-logout:hover{
+    color: #C13216;
+    transition: .3s;
+}
+
+#app-refres{
+    color: white;
+    font-size: 14px;
+    text-align: right; 
+}
+
+.header-hora-data{
+    margin-top: -25px;
+}
+
+.time {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 120px;
+    font-weight: 700px;
+    margin-right: 100px;   
+}
+
+#timer{
+    color: white;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.date {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 13px;
+    margin-left: 35px;
+}
