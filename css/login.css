@@ -1,0 +1,142 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Nunito', sans-serif;
+}
+
+.secao-principal{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, #33383D 0%, #1C1D20 100%);
+}
+
+.principal-login {
+    display: flex;
+    align-items: center;  
+}
+
+.metade-1{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.principal-chamada{
+    margin-right: 6em;
+}
+
+#chamada-titulo{
+    color: #E0E0E0;
+    display: flex;
+    font-size: 3.5em;
+    margin-bottom: .5em;
+}
+
+#chamada-texto{
+    color: #E0E0E0;
+    font-size: 14px;
+    margin-bottom: 4em;
+    margin-left: .5em;
+    display: flex;
+   
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+#form-texto{
+    font-size: 25px;
+    color: #E0E0E0;
+    margin-bottom: 1em;
+    display: flex;
+    margin-left: .3em;
+}
+
+#camp-usuario{
+    display: flex;
+    margin-bottom: 1em;
+}
+
+#form-email{
+    border-radius: 50px;
+    padding: 1em  1em;
+    width: 250px;
+    margin-bottom: 1em;
+    background: transparent;
+    border: solid 1px #E0E0E0;
+    color: white;
+}
+
+#fig-usuario{
+    width: 15px;
+    margin-left: 1em;
+    margin-bottom: .5em;
+}
+
+#camp-senha{
+    display: flex;
+}
+
+#fig-senha{
+    width: 15px;
+    margin-left: 1em;
+    margin-bottom: 2.5em;
+}
+
+#form-senha{
+    border-radius: 50px;
+    padding: 1em  1em;
+    text-align: start;
+    width: 250px;
+    margin-bottom: 3em;
+    background: transparent;
+    border: solid 1px #E0E0E0;
+    color: white;
+}
+
+#btn-continuar{
+    border-radius: 50px;
+    width: 280px;
+    padding: .5em  1em;
+    background: #FF2D04;
+    color: white;
+    border-color: transparent;
+    font-size: 18px;
+    box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+#btn-continuar:hover{
+    background: #9e1f06;
+    transition: .5s;
+    
+}
+
+.error-msg{
+    color: #E9B425; 
+    text-align: center;
+    margin-bottom: 2em;
+    margin-right: 1em;
+}
+
+.img-container{
+    width: 50vw;
+    height: 100vh;
+    object-fit: cover;  
+}
+
+.img-note{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.img-logoBranco{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 2em;
+    margin-right: 14em;
+}
