@@ -123,7 +123,7 @@ giveDate();
 function startTimer(duration) {
   let timer = duration, segundos;
   setInterval(()=> {
-      segundos = parseInt(timer % 10, 10);
+      segundos = parseInt(timer % 11, 10);
       segundos = segundos < 10 ? "0" + segundos : segundos;
       display = document.querySelector('#timer'); // selecionando o timer,
       display.innerHTML = segundos;
@@ -139,7 +139,7 @@ function startTimer(duration) {
   }, 1000);
 }
 
-startTimer(10) 
+startTimer(11) 
 
 
 
