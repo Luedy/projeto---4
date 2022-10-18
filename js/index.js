@@ -20,3 +20,21 @@ function logar(){
         msgErro.innerHTML = "Ops, usuário ou senha inválidos.<br> Tente novamente!";
     }
 }
+
+
+const iconLogin = document.querySelector("#fig-usuario");
+const input2 = document.getElementById('form-email');
+
+const iconPass = document.querySelector("#fig-senha");
+const input = document.getElementById('form-senha');
+input.addEventListener('click',()=>{
+    iconPass.classList.add('animacao')
+    input.classList.add('teste')
+
+});
+
+input2.addEventListener('click',()=>{
+    console.log("cliquei")
+    iconLogin.classList.add('animacao')
+    input2.classList.add('teste')
+});
