@@ -22,7 +22,7 @@ function logar(){
 }
 
 
-const iconLogin = document.querySelector("#fig-usuario");
+/*const iconLogin = document.querySelector("#fig-usuario");
 const input2 = document.getElementById('form-email');
 
 const iconPass = document.querySelector("#fig-senha");
@@ -38,3 +38,4 @@ input2.addEventListener('click',()=>{
     iconLogin.classList.add('animacao')
     input2.classList.add('teste')
 });
+*/
