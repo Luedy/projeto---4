@@ -9,6 +9,10 @@ html, body {
     margin: 3em;
 }
 
+.header-logo{
+    margin-top: -1rem;
+}
+
 .bola-logo{
     position: fixed;
     width: 400px;
@@ -16,20 +20,20 @@ html, body {
 }
 
 .cidade{
-    font-size: 30px;
+    font-size: 16px;
     font-weight: bold;
     margin-right: 15px;
 }
 .estado{
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
     margin-right: 15px;
 }
 
 .temperatura{
-    
+    margin-left: .3rem;
     margin-top: 10px;
-    font-size: 15px;
+    font-size: 48px;
     font-weight: bold;
 }
 
@@ -122,7 +126,7 @@ html, body {
     align-items: center;;
     color: white;
     padding: 31px;
-    padding-left: 21px; 
+    padding-left: 15px; 
     font-weight: 700;  
 }
 
@@ -191,9 +195,9 @@ html, body {
     display: flex;
     flex-direction: column;
     padding: 30px;
-    background-color: white;
+    background-color: rgba(182, 165, 165, 0.705);
     border-radius: 10px;
-    width: 50%;
+    width: 30%;
   }
   
   .active {
@@ -229,16 +233,19 @@ html, body {
     font-size: medium;
     padding: 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     color: white;
     cursor: pointer;
   }
   
   .btnOK {
    background-color: green!important;
+   width: 70px;
   }
+
   
   .btnClose {
     background-color: brown!important;
+    width: 70px;
    }
   

@@ -121,7 +121,7 @@ function startTimer(duration) {
   let timer = duration,
     segundos;
   setInterval(() => {
-    segundos = parseInt(timer % 10, 10);
+    segundos = parseInt(timer % 60, 10);
     segundos = segundos < 10 ? "0" + segundos : segundos;
     display = document.querySelector("#timer"); // selecionando o timer,
     display.innerHTML = segundos;
@@ -140,9 +140,7 @@ function startTimer(duration) {
   }, 1000);
 }
 
-//window.location.href = "http://127.0.0.1:5500/index.html";
-
-startTimer(10);
+startTimer(60);
 
 function getUserPosition() {
   let url = "";
@@ -169,7 +167,7 @@ function fetchApi(url, secondUrl) {
     .then((data) => {
       let tempInCelsius = ((5 / 9) * (data.main.temp - 32)).toFixed(1);
       city.textContent = data.name;
-      temperature.innerHTML = tempInCelsius;
+      temperature.innerHTML = tempInCelsius + '°';
     })
     .catch((err) => {
       console.log(err);
