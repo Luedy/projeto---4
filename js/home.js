@@ -121,18 +121,28 @@ function startTimer(duration) {
   let timer = duration,
     segundos;
   setInterval(() => {
-    segundos = parseInt(timer % 180, 10);
+    segundos = parseInt(timer % 10, 10);
     segundos = segundos < 10 ? "0" + segundos : segundos;
     display = document.querySelector("#timer"); // selecionando o timer,
     display.innerHTML = segundos;
     if (--timer < 0) {
       timer = duration;
-      window.location.href = "http://127.0.0.1:5500/index.html";
+      var retorno = confirm("Tempo esgotado, Deseja sair da página?");
+        if (retorno == true)
+        {
+          window.location.href = "http://127.0.0.1:5500/index.html";
+        }
+        else
+        {
+          location.reload();
+        }
     }
   }, 1000);
 }
 
-startTimer(180);
+//window.location.href = "http://127.0.0.1:5500/index.html";
+
+startTimer(10);
 
 function getUserPosition() {
   let url = "";

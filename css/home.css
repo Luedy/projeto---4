@@ -16,13 +16,21 @@ html, body {
 }
 
 .cidade{
-    font-size: 50px;
-    font-weight: bold;
-    margin-right: 15px;
-}.estado{
     font-size: 30px;
     font-weight: bold;
     margin-right: 15px;
+}
+.estado{
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.temperatura{
+    
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: bold;
 }
 
 .main{
@@ -131,6 +139,7 @@ html, body {
 
 .header-hora-data{
     margin-top: -25px;
+    margin-left: 30px;
 }
 
 .time {
