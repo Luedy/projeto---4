@@ -28,39 +28,37 @@ function giveDate() {
   let year = dataHora.getFullYear();
 
   switch (daydDia) {
-      case 0:
+    case 0:
       daydDia = "Domingo";
       break;
-     
-      case 1:
+
+    case 1:
       daydDia = "Segunda-feira";
       break;
-     
-      case 2:
+
+    case 2:
       daydDia = "Terça-feira";
       break;
-     
-      case 3:
+
+    case 3:
       daydDia = "Quarta-feira";
       break;
-     
-      case 4:
+
+    case 4:
       daydDia = "Quinta-feira";
       break;
-      
-      case 5:
+
+    case 5:
       daydDia = "Sexta-feira";
       break;
-     
-      case 6:
+
+    case 6:
       daydDia = "Sabado";
       break;
-     
-      default:
+
+    default:
       break;
   }
-
-
 
   switch (mounth) {
     case 1:
@@ -119,29 +117,95 @@ function giveDate() {
 }
 giveDate();
 
-
 function startTimer(duration) {
-  let timer = duration, segundos;
-  setInterval(()=> {
-      segundos = parseInt(timer % 11, 10);
-      segundos = segundos < 10 ? "0" + segundos : segundos;
-      display = document.querySelector('#timer'); // selecionando o timer,
-      display.innerHTML = segundos;
-      if (--timer < 0) {
-          timer = duration;
-          //window.location.href = "http://127.0.0.1:5500/index.html";
-          if (window.confirm("Tempo esgotado. Deseja sair da página?")) {
-            window.location.href = "http://127.0.0.1:5500/index.html";
-          } else{
-            window.location.reload();          
-          }
-      }
+  let timer = duration,
+    segundos;
+  setInterval(() => {
+    segundos = parseInt(timer % 180, 10);
+    segundos = segundos < 10 ? "0" + segundos : segundos;
+    display = document.querySelector("#timer"); // selecionando o timer,
+    display.innerHTML = segundos;
+    if (--timer < 0) {
+      timer = duration;
+      window.location.href = "http://127.0.0.1:5500/index.html";
+    }
   }, 1000);
 }
 
-startTimer(11) 
+startTimer(180);
+
+function getUserPosition() {
+  let url = "";
+  navigator.geolocation.getCurrentPosition((pos) => {
+    let lat = pos.coords.latitude;
+    let long = pos.coords.longitude;
+    console.log(lat, long);
+    url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=imperial&APPID=622296cd4fda08b69c46ccfa980f968d`;
+    secondUrl = `https://nominatim.openstreetmap.org/reverse?format=geojson&lat=${lat}&lon=${long}`;
+    fetchApi(url, secondUrl);
+    console.log(url);
+  });
+}
+
+function fetchApi(url, secondUrl) {
+  let city = document.querySelector(".cidade");
+  let temperature = document.querySelector(".temperatura");
+  let humidity = document.querySelector("#umidad");
+  let estado = document.querySelector(".estado");
+  fetch(url)
+    .then((data) => {
+      return data.json();
+    })
+    .then((data) => {
+      let tempInCelsius = ((5 / 9) * (data.main.temp - 32)).toFixed(1);
+      city.textContent = data.name;
+      temperature.innerHTML = tempInCelsius;
+    })
+    .catch((err) => {
+      console.log(err);
+    
+    });
+
+  fetch(secondUrl)
+    .then((data) => {
+      return data.json();
+    })
+    .then((data) => {
+      const teste = data.features;
+      return teste[0].properties.address;
+      
+    })
+    .then((data) => {
+      const EstadoSigla = data["ISO3166-2-lvl4"].split('-');
+      estado.innerHTML = `- ${EstadoSigla[1]}`
+      
+      
+    });
+}
 
 
+getUserPosition();
+
+const dataBase = [{
+  login: "admin",
+  senha: "admin"
+}];
+
+const modal = document.querySelector('.modal-container')
+
+function openModal() {
+  modal.classList.add('active')
+}
+
+function closeModal() {
+  localStorage.removeItem('login')
+  modal.classList.remove('active')
+}
+
+function SaveAndcloseModal() {
+  localStorage.login = JSON.stringify(dataBase); 
+  modal.classList.remove('active')
+}
 
 
 

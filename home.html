@@ -14,64 +14,80 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
     <title>Compass - Home</title>
 </head>
-<body>
-    <body onload="addWatch()">
+<body onload="addWatch()">
 
-        <section class="header">
-            <div class="header-logo">
-                <img id="header-logotipo" src="img/LogoCompasso preto.svg" alt="Logo compasso">
-            </div>
-            <div class="header-hora-data">
-                <div class="date-time">
-                    <div class="time">
-                      <span id='h'></span>:<span id='m'></span>
-                    </div>
-                    <div class="date"><span id='date'></span></div>
-                  </div>
-            </div>
-            <div class="header-clima">
-                <p>aqui o clima</p>
-            </div>
-        </section>
-    
-        <img  class="bola-logo" src="img/bola-LogoCompasso 1.svg" alt="Logo da compasso">
-        <main class="main">
-            <div id="main-conteudo">
-                <h3>Our mission is</h3>
-                <p>Nossa missão é</p>
-    
-                <h2>to transform the world</h2>
-                <p>transformar o mundo</p>
-    
-                <h2>building digital experiences</h2>
-                <p>construindo experiencias digitais</p>
-    
-                <h2>thath enable our client's growth</h2>
-                <p>que permitam o crescimento de nossos clientes</p>
-            </div>
-        </main>
-    
-        <footer class="footer">
-            <div class="container-footer">
-                <div class="footer-txt">
-                    <p>Essa janela do navegador é usada para manter sua sessão de autenticação ativa. Deixe-a<br> aberta em segundo plano e abra uma nova janela para contninuar a navegar.</p>
+    <section class="header">
+        <div class="header-logo">
+            <img id="header-logotipo" src="img/LogoCompasso preto.svg" alt="Logo compasso">
+        </div>
+        <div class="header-hora-data">
+            <div class="date-time">
+                <div class="time">
+                  <span id='h'></span>:<span id='m'></span>
                 </div>
-                <div id="barrinha">
-                    <hr id="barra">
-                </div>
-                <div class="footer-second">
-                    <p id="app-refres">Application<br> refresh in</p>
-                    <div id="timer"></div>
-                    <div class="footer-btns">
-                        <a id="btn-continue" href="https://noticias.uol.com.br/"><p>Continuar <br>Navegando</p></a>
-                    </div>
-                    <a id="btn-logout" href="http://127.0.0.1:5500/index.html">Logout</a>
-                </div>
-    
+                <div class="date"><span id='date'></span></div>
+              </div>
+        </div>
+        <div class="header-clima">
+            <span class="cidade"></span><span class="estado">-BA</span>
+            <p class="temperatura"></pc>
+        </div>
+    </section>
+
+    <img  class="bola-logo" src="img/bola-LogoCompasso 1.svg" alt="Logo da compasso">
+    <main class="main">
+        <div id="main-conteudo">
+            <h3>Our mission is</h3>
+            <p>Nossa missão é</p>
+
+            <h2>to transform the world</h2>
+            <p>transformar o mundo</p>
+
+            <h2>building digital experiences</h2>
+            <p>construindo experiencias digitais</p>
+
+            <h2>thath enable our client's growth</h2>
+            <p>que permitam o crescimento de nossos clientes</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container-footer">
+            <div class="footer-txt">
+                <p>Essa janela do navegador é usada para manter sua sessão de autenticação ativa. Deixe-a<br> aberta em segundo plano e abra uma nova janela para contninuar a navegar.</p>
             </div>
-        </footer>
+            <div id="barrinha">
+                <hr id="barra">
+            </div>
+            <div class="footer-second">
+                <p id="app-refres">Application<br> refresh in</p>
+                <div id="timer"></div>
+                <div class="footer-btns">
+                    <a id="btn-continue" href="https://www.google.com/"><p>Continuar <br>Navegando</p></a>
+                </div>
+                <a id="btn-logout" onclick="openModal()" >Logout</a>
+            </div>
+
+        </div>
+    </footer>
+    <button class="btnOpenModal" onclick="openModal()">Open Modal</button>
+
+    <div class="modal-container">
+      <div class="modal">
+        <h2>PopUp</h2>
+        <hr />
+        <span>
+          Deseja manter o login salvo?
+        </span>
+        <hr />
+        <div class="btns">
+          <button class="btnOK" onclick="SaveAndcloseModal() "><a href="//127.0.0.1:5500/">Sim</a></button>
+          <button class="btnClose" onclick="closeModal()"><a href="//127.0.0.1:5500/">Não</a></button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/home.js"></script>
     
-    
-        <script src="js/home.js"></script>
 </body>
 </html>
